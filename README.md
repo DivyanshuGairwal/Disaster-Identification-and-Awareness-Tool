@@ -39,7 +39,4 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
   - Browser Geolocation API
   - Weather API (OpenWeather or equivalent)
 
----
-
-## 📂 Project Structure
 
