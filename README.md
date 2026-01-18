@@ -39,5 +39,10 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
   - Browser Geolocation API
   - Weather API (OpenWeather or equivalent)
 
-Live Demo: https://disaster-identification-and-awarene.vercel.app/
+  ## APIs Used
+- [Open-Meteo](https://open-meteo.com/) (Weather) - No API Key required.
+- [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/) (Disasters) - Public Feed.
+
+
+🔗 Live Demo: https://disaster-identification-and-awarene.vercel.app/
 
