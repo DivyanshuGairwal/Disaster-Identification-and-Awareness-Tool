@@ -39,4 +39,5 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
   - Browser Geolocation API
   - Weather API (OpenWeather or equivalent)
 
+Live Demo: https://disaster-identification-and-awarene.vercel.app/
 
