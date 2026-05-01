@@ -56,5 +56,6 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
 
 ---
 
-🔗 **Live Demo:** [Check it out here](https://disaster-identification-and-awarene.vercel.app/)
+🔗 **Live Demo:** https://disaster-identification-and-awarene.vercel.app/
+
 
