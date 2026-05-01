@@ -9,6 +9,7 @@ import { AlertTriangle, MapPin, RefreshCw, Radio, Info } from 'lucide-react';
 import { Footer } from './Footer';
 import { InfoModal } from './InfoModal';
 import { SeverityLegend } from './SeverityLegend';
+import { SafetyTips } from './SafetyTips';
 import { formatDistanceToNow } from 'date-fns';
 
 export const Dashboard: React.FC = () => {
@@ -21,6 +22,7 @@ export const Dashboard: React.FC = () => {
     const [errorDisasters, setErrorDisasters] = useState<string | null>(null);
     const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
     const [isInfoOpen, setIsInfoOpen] = useState(false);
+    const [minMagnitude, setMinMagnitude] = useState<number>(0);
 
     // Fetch Weather
     const fetchWeather = useCallback(async () => {
@@ -69,6 +71,8 @@ export const Dashboard: React.FC = () => {
         // New Delhi coordinates
         setManualLocation(28.6139, 77.2090);
     };
+
+    const filteredDisasters = disasters.filter(d => d.properties.mag >= minMagnitude);
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -155,6 +159,8 @@ export const Dashboard: React.FC = () => {
                             )}
                         </section>
 
+                        <SafetyTips />
+
                         <button
                             onClick={fetchDisasters}
                             disabled={loadingDisasters}
@@ -173,7 +179,24 @@ export const Dashboard: React.FC = () => {
                                     <AlertTriangle className="w-5 h-5 mr-2 text-amber-500" />
                                     Global Disaster Feed
                                 </h2>
-                                <p className="text-sm text-slate-500 mt-1">Real-time earthquake reports from USGS</p>
+                                <div className="flex items-center mt-2 space-x-2">
+                                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Filter:</span>
+                                    <div className="flex bg-slate-100 p-1 rounded-lg">
+                                        {[0, 3, 5].map((val) => (
+                                            <button
+                                                key={val}
+                                                onClick={() => setMinMagnitude(val)}
+                                                className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${
+                                                    minMagnitude === val 
+                                                    ? 'bg-white text-indigo-600 shadow-sm' 
+                                                    : 'text-slate-500 hover:text-slate-700'
+                                                }`}
+                                            >
+                                                {val === 0 ? 'All' : `M${val}.0+`}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                             <SeverityLegend />
                         </div>
@@ -199,9 +222,15 @@ export const Dashboard: React.FC = () => {
                             </div>
                         ) : (
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {disasters.map((feature) => (
-                                    <DisasterCard key={feature.id} data={feature} />
-                                ))}
+                                {filteredDisasters.length > 0 ? (
+                                    filteredDisasters.map((feature) => (
+                                        <DisasterCard key={feature.id} data={feature} />
+                                    ))
+                                ) : (
+                                    <div className="col-span-full py-12 text-center bg-slate-50 rounded-xl border border-dashed border-slate-200">
+                                        <p className="text-slate-500 font-medium">No disasters found matching your filter.</p>
+                                    </div>
+                                )}
                             </div>
                         )}
                     </div>

@@ -4,45 +4,57 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-- 🌐 **Real-time Disaster Feed**
-  - Live earthquake data powered by the USGS public API
-  - Auto-refreshing updates with timestamps
-
+- 🌐 **Real-time Global Feed**
+  - Live earthquake data powered by the **USGS public API**.
+  - Auto-refreshing updates with precise timestamps.
+- ⚡ **Dynamic Magnitude Filtering**
+  - Filter disasters by intensity (**All**, **M3.0+**, **M5.0+**) for targeted monitoring.
 - 📍 **Geolocation Awareness**
-  - Detects user location using browser geolocation
-  - Graceful fallback when location access is denied
-  - Option to use a default location (New Delhi)
-
-- 🌦 **Local Conditions**
-  - Displays local weather information when location access is available
-
-- ⚡ **Asynchronous Data Handling**
-  - Built using modern async/await and Promise-based API calls
-  - Non-blocking UI updates with loading and error states
-
-- 🎨 **Modern UI**
-  - Clean dashboard layout
-  - Severity-based color coding (Low / Moderate / High)
-  - Fully responsive for mobile and desktop
+  - Detects user location using browser geolocation with a graceful fallback.
+- 🛡️ **Awareness & Safety**
+  - Integrated safety guidelines and tips for earthquake preparedness.
+- 🌦️ **Local Conditions**
+  - Live weather data based on the user's current coordinates.
+- 🎨 **Modern Premium UI**
+  - Glassmorphism design, dark-mode header, and severity-coded alerts.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** ReactJS, TypeScript
-- **Styling:** Tailwind CSS
+- **Frontend:** React 19, TypeScript
+- **Styling:** Tailwind CSS (Modern Design System)
+- **Icons:** Lucide React
 - **Build Tool:** Vite
-- **APIs Used:**
-  - USGS Earthquake API
-  - Browser Geolocation API
-  - Weather API (OpenWeather or equivalent)
+- **Data Handling:** Axios & Async/Await
 
-  ## APIs Used
-- [Open-Meteo](https://open-meteo.com/) (Weather) - No API Key required.
-- [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/) (Disasters) - Public Feed.
+## 🔌 APIs Used
+- **[USGS Earthquake API](https://earthquake.usgs.gov/)** - Real-time seismic data.
+- **[Open-Meteo](https://open-meteo.com/)** - Free weather forecasting.
+- **Browser Geolocation API** - Device location services.
 
+---
 
-🔗 Live Demo: https://disaster-identification-and-awarene.vercel.app/
+## 📦 Getting Started
+
+1. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Run Development Server:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Build for Production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+🔗 **Live Demo:** [Check it out here](https://disaster-identification-and-awarene.vercel.app/)
 
