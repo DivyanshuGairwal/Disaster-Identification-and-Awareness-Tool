@@ -46,7 +46,7 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
 
 2. **Run Development Server:**
    ```bash
-   
+   npm run dev
    ```
 
 3. **Build for Production:**
