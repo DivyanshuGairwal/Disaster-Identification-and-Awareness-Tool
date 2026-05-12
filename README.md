@@ -50,7 +50,7 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
    ```
 
 3. **Build for Production:**
-   ```bash just trying to learn some new concepts
+   ```bash
    npm run build
    ```
 
