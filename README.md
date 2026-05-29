@@ -33,7 +33,7 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
 ## 🔌 APIs Used
 - **[USGS Earthquake API](https://earthquake.usgs.gov/)** - Real-time seismic data.
 - **[Open-Meteo](https://open-meteo.com/)** - Free weather forecasting.
-- **Browser Geolocation API** - Device location services.
+- **Browser Geolocation API** - 
 
 ---
 
@@ -55,6 +55,7 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
    ```
 
 🔗 **Live Demo:** https://disaster-identification-and-awarene.vercel.app/
+
 
 
 
