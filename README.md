@@ -41,17 +41,5 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
 
 1. **Install Dependencies:**
    ```bash
-   npm install
-   ```
-
-2. **Run Development Server:**
-   ```bash
-   npm run dev
-   ```
-
-3. **Build for Production:**
-   ```bash
-   npm run build
-   ```
 
 🔗 **Live Demo:** https://disaster-identification-and-awarene.vercel.app/
