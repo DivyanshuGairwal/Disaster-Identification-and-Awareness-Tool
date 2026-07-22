@@ -54,6 +54,3 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
    npm run build
    ```
 🔗 **Live Demo:** https://disaster-identification-and-awarene.vercel.app/    
-
-
-sdfd
