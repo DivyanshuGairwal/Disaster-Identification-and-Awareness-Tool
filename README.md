@@ -57,5 +57,5 @@ A real-time disaster monitoring web application that provides up-to-date earthqu
 
 
 
-npm ejefjsdf
+npm ejefjsd
 🔗 **Live Demo:** https://disaster-identification-and-awarene.vercel.app/    
